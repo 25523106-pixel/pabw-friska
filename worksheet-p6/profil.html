@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Masakan Saya</title>
+
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+    <link rel="stylesheet" href="responsif.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="header-baris">
+                <h1>Menu Masakan Saya</h1>
+
+                <nav aria-label="Navigasi utama">
+                    <ul>
+                        <li><a href="#daftar-masakan">Daftar Masakan</a></li>
+                        <li><a href="#tambah-resep">Tambah Resep</a></li>
+                        <li><a href="#tentang-saya">Tentang Saya</a></li>
+                        <li class="pengalih-tema">
+                            <label for="pilihan-tema">Tema:</label>
+                            <select id="pilihan-tema" aria-label="Pilih tema halaman">
+                                <option value="light">☀️ Light</option>
+                                <option value="dark">🌙 Dark</option>
+                                <option value="ocean">🌊 Ocean</option>
+                                <option value="forest">🌿 Forest</option>
+                                <option value="purple">💜 Purple</option>
+                            </select>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="isi">
+            <aside class="sisi" aria-label="Menu samping">
+                <section class="kartu">
+                    <h2>Menu</h2>
+                    <ul class="menu-samping">
+                        <li><a href="#daftar-masakan">Daftar Masakan</a></li>
+                        <li><a href="#tambah-resep">Tambah Resep</a></li>
+                        <li><a href="#tentang-saya">Tentang Saya</a></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <div class="utama">
+                <section id="daftar-masakan" class="kartu sorotan">
+                    <h2>Daftar Masakan</h2>
+                    <div class="table-wrap">
+                    <table>
+                        <caption>Menu masakan yang bisa saya buat</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nama Masakan</th>
+                                <th scope="col">Bahan Utama</th>
+                                <th scope="col">Tingkat Kesulitan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Nasi Kuning</th>
+                                <td>Nasi, santan, kunyit</td>
+                                <td>Sedang</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mie Goreng</th>
+                                <td>Mie, telur, sayuran</td>
+                                <td>Mudah</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ayam Goreng</th>
+                                <td>Ayam, bumbu rempah</td>
+                                <td>Mudah</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <div class="galeri">
+                        <figure class="kartu">
+                            <img src="nasi-kuning.jpg" alt="Piring saji berisi Nasi Kuning lengkap dengan lauk" loading="lazy">
+                            <figcaption>Contoh sajian Nasi Kuning rumahan</figcaption>
+                            <div class="kartu__kaki"><span>Nasi Kuning</span><span>Sedang</span></div>
+                        </figure>
+
+                        <figure class="kartu">
+                            <img src="mie-goreng.jpg" alt="Piring saji berisi Mie Goreng dengan topping telur dan sayuran" loading="lazy">
+                            <figcaption>Contoh sajian Mie Goreng spesial</figcaption>
+                            <div class="kartu__kaki"><span>Mie Goreng</span><span>Mudah</span></div>
+                        </figure>
+
+                        <figure class="kartu">
+                            <img src="ayam-goreng.jpg" alt="Piring saji berisi ayam goreng dengan nasi dan sayuran" loading="lazy">
+                            <figcaption>Contoh sajian Ayam Goreng spesial</figcaption>
+                            <div class="kartu__kaki"><span>Ayam Goreng</span><span>Mudah</span></div>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="tambah-resep" class="kartu papan">
+                    <h2>Tambah Resep</h2>
+                    <form action="proses-tambah.php" method="post" class="form-kolom">
+                        <div class="form-kolom">
+                            <label for="nama-masakan">Nama Masakan</label>
+                            <input type="text" id="nama-masakan" name="nama-masakan" required>
+                        </div>
+
+                        <div class="form-kolom">
+                            <label for="bahan-utama">Bahan Utama</label>
+                            <input type="text" id="bahan-utama" name="bahan-utama" required>
+                        </div>
+
+                        <div class="form-kolom">
+                            <label for="tingkat-kesulitan">Tingkat Kesulitan</label>
+                            <select id="tingkat-kesulitan" name="tingkat-kesulitan" required>
+                                <option value="mudah">Mudah</option>
+                                <option value="sedang">Sedang</option>
+                                <option value="sulit">Sulit</option>
+                            </select>
+                        </div>
+
+                        <button type="submit">Simpan</button>
+                    </form>
+                </section>
+
+                <section id="tentang-saya" class="kartu">
+                    <h2>Tentang Saya</h2>
+                    <p>
+                        Halaman web ini dibuat sebagai wadah untuk mendokumentasikan berbagai menu
+                        masakan rumahan yang saya pelajari dan kuasai sehari-hari. Melalui halaman ini,
+                        resep dan tingkat kesulitan masakan dapat diakses dengan mudah dan terstruktur.
+                    </p>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>Nama: Friska Rahmadani | NIM: 25523106 | Tahun: 2026</p>
+        </footer>
+    </div>
+    <script src="tema.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* P5 - Komponen: Flexbox, Grid, dan pencegahan overflow */
+
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  min-width: 0;
+}
+
+label {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+input, select, textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  font: inherit;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-color);
+  color: var(--text-main);
+}
+
+button {
+  width: fit-content;
+  max-width: 100%;
+  font: inherit;
+  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: var(--brand-primary);
+  color: var(--palette-white);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-action);
+  outline-offset: 3px;
+}
+
+input:user-invalid {
+  border-color: var(--state-danger);
+  border-width: 2px;
+}
+
+.pesan-galat {
+  display: none;
+  color: var(--state-danger);
+  font-size: var(--font-size-sm);
+}
+
+.form-kolom:has(input:user-invalid) .pesan-galat {
+  display: block;
+}
+
+.kartu__isi {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  min-width: 0;
+}
+
+.kartu__kaki {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.kartu__judul {
+  overflow-wrap: anywhere;
+}
+
+.galeri .kartu {
+  display: grid;
+  align-content: start;
+  min-height: 14rem;
+}
+
+.kartu p,
+.kartu td,
+.kartu th,
+figcaption {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.kartu img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.kartu table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.menu-samping {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.menu-samping a {
+  overflow-wrap: anywhere;
+}
