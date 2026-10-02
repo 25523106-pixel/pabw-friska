@@ -1,17 +1,8 @@
-<!DOCTYPE html>
 <!--
-  KERANGKA AWAL — Halaman Profil Saya
-  PABW 2026/2027 · Pertemuan 3
-
-  Cara pakai:
-  1. Salin berkas ini, ganti nama menjadi profil.html
-  2. Ganti setiap tulisan TODO dengan isi milik Anda SENDIRI
-  3. Simpan, lalu buka di peramban (F5 untuk memuat ulang)
-  4. Kerjakan berurutan mengikuti Lembar B, C, D, dan E pada worksheet
-
-  Jangan menghapus komentar TODO sebelum bagian itu Anda kerjakan —
-  komentar itu adalah daftar periksa Anda sendiri.
+Jangan menghapus komentar TODO sebelum bagian itu Anda kerjakan —
+komentar itu adalah daftar periksa Anda sendiri.
 -->
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -50,7 +41,7 @@
         <section id="daftar-masakan">
             <h2>Daftar Masakan</h2>
 
-            <table border="1">
+            <table>
                 <caption>Menu masakan yang bisa saya buat</caption>
 
                 <thead>
@@ -61,7 +52,7 @@
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody id="daftar-resep">
                     <tr>
                         <th scope="row">Nasi Kuning</th>
                         <td>Nasi, santan, kunyit</td>
@@ -75,7 +66,7 @@
                     </tr>
 
                     <tr>
-                        <th scope="row"> Ayam Goreng</th>
+                        <th scope="row">Ayam Goreng</th>
                         <td>Ayam, bumbu rempah</td>
                         <td>Mudah</td>
                     </tr>
@@ -83,64 +74,70 @@
             </table>
 
             <!-- Penambahan Gambar (Lembar D) -->
+
             <!-- Gambar Ilustrasi Menu Nasi Kuning -->
             <figure style="margin-top: 20px;">
-                <img src="nasi-kuning.jpg" 
-                     alt="Piring saji berisi Nasi Kuning lengkap dengan lauk" 
-                     width="250" height="250" loading="lazy">
+                <img src="nasi-kuning.jpg"
+                     alt="Piring saji berisi Nasi Kuning lengkap dengan lauk"
+                     width="250"
+                     height="250"
+                     loading="lazy">
                 <figcaption>Contoh sajian Nasi Kuning rumahan</figcaption>
             </figure>
 
-            <!-- Gambar Ilustrasi Menu Mie Goreng (PERBAIKAN) -->
+            <!-- Gambar Ilustrasi Menu Mie Goreng -->
             <figure style="margin-top: 20px;">
-                <img src="mie-goreng.jpg" 
-                     alt="Piring saji berisi Mie Goreng dengan topping orak-arik telur dan sayuran" 
-                     width="250" height="250" loading="lazy">
+                <img src="mie-goreng.jpg"
+                     alt="Piring saji berisi Mie Goreng dengan topping orak-arik telur dan sayuran"
+                     width="250"
+                     height="250"
+                     loading="lazy">
                 <figcaption>Contoh sajian Mie Goreng spesial</figcaption>
             </figure>
 
-            <!-- Gambar Ilustrasi Ayam goreng (PERBAIKAN) -->
-             <figure style="margin-top: 20px;">
-                <img src="ayam-goreng.jpg" 
-                     alt="Piring saji berisi ayam Goreng dengan nasi dan sayuran" 
-                     width="250" height="250" loading="lazy">
+            <!-- Gambar Ilustrasi Ayam Goreng -->
+            <figure style="margin-top: 20px;">
+                <img src="ayam-goreng.jpg"
+                     alt="Piring saji berisi ayam Goreng dengan nasi dan sayuran"
+                     width="250"
+                     height="250"
+                     loading="lazy">
                 <figcaption>Contoh sajian ayam goreng spesial</figcaption>
             </figure>
+
         </section>
 
         <!-- Form Tambah Resep -->
         <section id="tambah-resep">
             <h2>Tambah Resep</h2>
 
-            <form action="proses-tambah.php" method="post">
+            <form id="formResep">
+
                 <p>
-                    <label for="nama-masakan">Nama Masakan</label><br>
-                    <input 
-                        type="text" 
-                        id="nama-masakan" 
-                        name="nama-masakan" 
-                        required
-                    >
+                    <label for="nama-masakan">Nama Masakan</label>
+                    <input
+                        type="text"
+                        id="nama-masakan"
+                        name="nama-masakan"
+                        required>
                 </p>
 
                 <p>
                     <label for="bahan-utama">Bahan Utama</label><br>
-                    <input 
-                        type="text" 
-                        id="bahan-utama" 
-                        name="bahan-utama" 
-                        required
-                    >
+                    <input
+                        type="text"
+                        id="bahan-utama"
+                        name="bahan-utama"
+                        required>
                 </p>
 
                 <p>
                     <label for="tingkat-kesulitan">Tingkat Kesulitan</label><br>
-                    <select 
-                        type="text"
-                        id="tingkat-kesulitan" 
-                        name="tingkat-kesulitan" 
-                        required
-                    >
+                    <select
+                        id="tingkat-kesulitan"
+                        name="tingkat-kesulitan"
+                        required>
+                        <option value="" disabled selected>Pilih tingkat kesulitan</option>
                         <option value="mudah">Mudah</option>
                         <option value="sedang">Sedang</option>
                         <option value="sulit">Sulit</option>
@@ -149,13 +146,18 @@
 
                 <button type="submit">Simpan</button>
             </form>
+            <p id="pesan-form" role="status" aria-live="polite"></p>
         </section>
 
+        <!-- Tentang Saya -->
         <section id="tentang-saya">
             <h2>Tentang Saya</h2>
 
             <p>
-                Halaman web ini dibuat sebagai wadah untuk mendokumentasikan berbagai menu masakan rumahan yang saya pelajari dan kuasai sehari-hari. Melalui halaman ini, resep dan tingkat kesulitan masakan dapat diakses dengan mudah dan terstruktur.
+                Halaman web ini dibuat sebagai wadah untuk mendokumentasikan
+                berbagai menu masakan rumahan yang saya pelajari dan kuasai
+                sehari-hari. Melalui halaman ini, resep dan tingkat kesulitan
+                masakan dapat diakses dengan mudah dan terstruktur.
             </p>
         </section>
 
@@ -163,11 +165,49 @@
 
     <footer>
         <p>
-            Nama: Friska Rahmadani | 
-            NIM: 25523106 | 
+            Nama: Friska Rahmadani |
+            NIM: 25523106 |
             Tahun: 2026
         </p>
     </footer>
+
+
+    <script>
+        const formResep = document.getElementById("formResep");
+        const daftarResep = document.getElementById("daftar-resep");
+        const pesanForm = document.getElementById("pesan-form");
+
+        formResep.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nama = document.getElementById("nama-masakan").value.trim();
+            const bahan = document.getElementById("bahan-utama").value.trim();
+            const kesulitanSelect = document.getElementById("tingkat-kesulitan");
+            const kesulitan = kesulitanSelect.options[kesulitanSelect.selectedIndex].text;
+
+            if (!nama || !bahan) {
+                pesanForm.textContent = "Nama masakan dan bahan utama wajib diisi.";
+                return;
+            }
+
+            const baris = document.createElement("tr");
+            const namaCell = document.createElement("th");
+            namaCell.scope = "row";
+            namaCell.textContent = nama;
+
+            const bahanCell = document.createElement("td");
+            bahanCell.textContent = bahan;
+
+            const kesulitanCell = document.createElement("td");
+            kesulitanCell.textContent = kesulitan;
+
+            baris.append(namaCell, bahanCell, kesulitanCell);
+            daftarResep.appendChild(baris);
+
+            pesanForm.textContent = "Resep “" + nama + "” berhasil ditambahkan.";
+            formResep.reset();
+        });
+    </script>
 
 </body>
 

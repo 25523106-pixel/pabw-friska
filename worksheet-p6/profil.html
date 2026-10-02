@@ -106,7 +106,7 @@
 
                 <section id="tambah-resep" class="kartu papan">
                     <h2>Tambah Resep</h2>
-                    <form action="proses-tambah.php" method="post" class="form-kolom">
+                    <form id="formResep" class="form-kolom">
                         <div class="form-kolom">
                             <label for="nama-masakan">Nama Masakan</label>
                             <input type="text" id="nama-masakan" name="nama-masakan" required>
@@ -146,5 +146,33 @@
         </footer>
     </div>
     <script src="tema.js" defer></script>
+        <script src="tema.js" defer></script>
+
+    <script>
+    document.getElementById("formResep").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const nama = document.getElementById("nama-masakan").value;
+        const bahan = document.getElementById("bahan-utama").value;
+        const kesulitan = document.getElementById("tingkat-kesulitan").value;
+
+        const tabel = document.querySelector("#daftar-masakan tbody");
+
+        const baris = document.createElement("tr");
+
+        baris.innerHTML = `
+            <th scope="row">${nama}</th>
+            <td>${bahan}</td>
+            <td>${kesulitan.charAt(0).toUpperCase() + kesulitan.slice(1)}</td>
+        `;
+
+        tabel.appendChild(baris);
+
+        alert("Resep berhasil disimpan!");
+
+        document.getElementById("formResep").reset();
+    });
+    </script>
+
 </body>
 </html>
