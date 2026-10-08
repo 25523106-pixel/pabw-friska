@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Masakan Saya</title>
+
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+    <link rel="stylesheet" href="responsif.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="header-baris">
+                <h1 id="judul-halaman"></h1>
+
+                <nav aria-label="Navigasi utama">
+                    <ul>
+                        <li><a href="#daftar-masakan">Daftar Masakan</a></li>
+                        <li><a href="#tambah-resep">Tambah Resep</a></li>
+                        <li><a href="#tentang-saya">Tentang Saya</a></li>
+                        <li class="pengalih-tema">
+                            <label for="pilihan-tema">Tema:</label>
+                            <select id="pilihan-tema" aria-label="Pilih tema halaman">
+                                <option value="light">☀️ Light</option>
+                                <option value="dark">🌙 Dark</option>
+                                <option value="ocean">🌊 Ocean</option>
+                                <option value="forest">🌿 Forest</option>
+                                <option value="purple">💜 Purple</option>
+                            </select>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="isi">
+            <aside class="sisi" aria-label="Menu samping">
+                <section class="kartu">
+                    <h2>Menu</h2>
+                    <ul class="menu-samping">
+                        <li><a href="#daftar-masakan">Daftar Masakan</a></li>
+                        <li><a href="#tambah-resep">Tambah Resep</a></li>
+                        <li><a href="#tentang-saya">Tentang Saya</a></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <div class="utama">
+                <section id="daftar-masakan" class="kartu sorotan">
+                    <h2>Daftar Masakan</h2>
+                    <div class="table-wrap">
+                    <table>
+                        <caption>Menu masakan yang bisa saya buat</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nama Masakan</th>
+                                <th scope="col">Bahan Utama</th>
+                                <th scope="col">Tingkat Kesulitan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <div class="galeri">
+                    
+                    </div>
+                </section>
+
+                <section id="tambah-resep" class="kartu papan">
+                    <h2>Tambah Resep</h2>
+                    <form id="formResep" class="form-kolom">
+                        <div class="form-kolom">
+                            <label for="nama-masakan">Nama Masakan</label>
+                            <input type="text" id="nama-masakan" name="nama-masakan" required>
+                        </div>
+
+                        <div class="form-kolom">
+                            <label for="bahan-utama">Bahan Utama</label>
+                            <input type="text" id="bahan-utama" name="bahan-utama" required>
+                        </div>
+
+                        <div class="form-kolom">
+                            <label for="tingkat-kesulitan">Tingkat Kesulitan</label>
+                            <select id="tingkat-kesulitan" name="tingkat-kesulitan" required>
+                                <option value="mudah">Mudah</option>
+                                <option value="sedang">Sedang</option>
+                                <option value="sulit">Sulit</option>
+                            </select>
+                        </div>
+
+                        <button type="submit">Simpan</button>
+                    </form>
+                </section>
+
+                <section id="tentang-saya" class="kartu">
+                    <h2>Tentang Saya</h2>
+                    <p id="teks-tentang"></p>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p id="teks-footer"></p>
+        </footer>
+    </div>
+    <script src="tema.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
