@@ -1,0 +1,192 @@
+/* SISTEM 5 TEMA */
+:root {
+  --bg-primary: #f8fafc;
+  --text-main: #0f172a;
+  --surface-color: #ffffff;
+  --border-color: #cbd5e1;
+  --brand-primary: #0284c7;
+  --accent-action: #0ea5e9;
+  --state-danger: #dc2626;
+  --text-secondary: #64748b;
+  --hover-color: #e0f2fe;
+  --focus-ring: #38bdf8;
+  color-scheme: light;
+}
+
+/* 1. LIGHT */
+:root[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --text-main: #0f172a;
+  --surface-color: #ffffff;
+  --border-color: #cbd5e1;
+  --brand-primary: #0284c7;
+  --accent-action: #0ea5e9;
+  --state-danger: #dc2626;
+  --text-secondary: #64748b;
+  --hover-color: #e0f2fe;
+  --focus-ring: #38bdf8;
+  color-scheme: light;
+}
+
+/* 2. DARK */
+:root[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --text-main: #f8fafc;
+  --surface-color: #1e293b;
+  --border-color: #475569;
+  --brand-primary: #38bdf8;
+  --accent-action: #7dd3fc;
+  --state-danger: #f87171;
+  --text-secondary: #cbd5e1;
+  --hover-color: #334155;
+  --focus-ring: #7dd3fc;
+  color-scheme: dark;
+}
+
+/* 3. OCEAN */
+:root[data-theme="ocean"] {
+  --bg-primary: #ecfeff;
+  --text-main: #164e63;
+  --surface-color: #ffffff;
+  --border-color: #67e8f9;
+  --brand-primary: #0891b2;
+  --accent-action: #06b6d4;
+  --state-danger: #dc2626;
+  --text-secondary: #155e75;
+  --hover-color: #cffafe;
+  --focus-ring: #22d3ee;
+  color-scheme: light;
+}
+
+/* 4. FOREST */
+:root[data-theme="forest"] {
+  --bg-primary: #f0fdf4;
+  --text-main: #14532d;
+  --surface-color: #ffffff;
+  --border-color: #86efac;
+  --brand-primary: #15803d;
+  --accent-action: #22c55e;
+  --state-danger: #dc2626;
+  --text-secondary: #166534;
+  --hover-color: #dcfce7;
+  --focus-ring: #4ade80;
+  color-scheme: light;
+}
+
+/* 5. PURPLE */
+:root[data-theme="purple"] {
+  --bg-primary: #faf5ff;
+  --text-main: #3b0764;
+  --surface-color: #ffffff;
+  --border-color: #d8b4fe;
+  --brand-primary: #7e22ce;
+  --accent-action: #a855f7;
+  --state-danger: #dc2626;
+  --text-secondary: #6b21a8;
+  --hover-color: #f3e8ff;
+  --focus-ring: #c084fc;
+  color-scheme: light;
+}
+
+/* PENGALIH TEMA */
+.pengalih-tema {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.pengalih-tema label {
+  color: var(--text-main);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+#pilihan-tema {
+  min-width: 9rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--surface-color);
+  color: var(--text-main);
+  font: inherit;
+  cursor: pointer;
+}
+
+#pilihan-tema:hover {
+  border-color: var(--brand-primary);
+}
+
+#pilihan-tema:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+body,
+.kartu,
+input,
+select,
+textarea,
+button,
+header,
+footer {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+.card,
+.kartu,
+.container {
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+button,
+.btn,
+.tombol {
+  background-color: var(--brand-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover,
+.tombol:hover {
+  background-color: var(--accent-action);
+}
+
+.btn-danger,
+.tombol-hapus {
+  background-color: var(--state-danger);
+}
+
+input,
+select,
+textarea {
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+}
+
+a {
+  color: var(--brand-primary);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+}

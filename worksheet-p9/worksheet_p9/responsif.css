@@ -1,0 +1,82 @@
+/* P6 - Responsif Mobile-First */
+
+/* ===== Dasar: berlaku di semua lebar, tanpa media query ===== */
+.page {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 100dvh;
+}
+
+.isi,
+.utama,
+.galeri {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.sisi,
+.isi,
+.utama,
+.galeri {
+  min-width: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-block-end: var(--space-4);
+}
+
+.table-wrap table {
+  min-width: 32rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kartu__isi,
+.kartu__kaki,
+form {
+  min-width: 0;
+}
+
+.kartu__judul,
+.kartu p,
+.kartu td,
+.kartu th,
+figcaption {
+  overflow-wrap: anywhere;
+}
+
+/* ===== Tablet: galeri dua kolom ===== */
+@media (min-width: 48rem) {
+  .galeri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Desktop: sidebar bersanding dengan konten ===== */
+@media (min-width: 60rem) {
+  .isi {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+
+  .utama {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sorotan {
+    grid-column: span 2;
+  }
+
+  .galeri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
