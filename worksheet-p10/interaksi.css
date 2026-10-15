@@ -1,0 +1,73 @@
+/* P9 - Interaksi: filter, keadaan kosong, galat form.
+   Dimuat paling akhir (setelah responsif.css) supaya aturannya menang atas tema.css. */
+
+/* Atribut hidden harus benar-benar menyembunyikan, termasuk .galeri yang memakai display: grid */
+[hidden] {
+  display: none !important;
+}
+
+/* ----- Tombol filter ----- */
+.filter-baris {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-end: var(--space-4);
+}
+
+.filter-baris button {
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.filter-baris button:hover {
+  background-color: var(--hover-color);
+}
+
+.filter-baris button.aktif {
+  background-color: var(--brand-primary);
+  color: var(--bg-primary);
+  border-color: var(--brand-primary);
+}
+
+/* ----- Pesan kosong ----- */
+#kosong {
+  padding: var(--space-4);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+}
+
+/* ----- Galat form (diisi oleh JavaScript) ----- */
+.pesan-galat:not(:empty) {
+  display: block;
+}
+
+[aria-invalid="true"] {
+  border-color: var(--state-danger);
+  border-width: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#status-form {
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+/* ===== P10 - keadaan memuat dan gagal ===== */
+#muat {
+  padding: var(--space-4);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Pesan gagal memakai elemen #kosong yang sama, dengan bingkai merah */
+#kosong.galat {
+  border: 2px solid var(--state-danger);
+  border-style: solid;
+  color: var(--state-danger);
+}

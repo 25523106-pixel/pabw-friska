@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nama": "Nasi Kuning",
+    "bahan": "Nasi, santan, kunyit",
+    "kesulitan": "Sedang",
+    "gambar": "nasi-kuning.jpg",
+    "alt": "Piring saji berisi Nasi Kuning lengkap dengan lauk",
+    "keterangan": "Contoh sajian Nasi Kuning rumahan"
+  },
+  {
+    "id": 2,
+    "nama": "Mie Goreng",
+    "bahan": "Mie, telur, sayuran",
+    "kesulitan": "Mudah",
+    "gambar": "mie-goreng.jpg",
+    "alt": "Piring saji berisi Mie Goreng dengan topping telur dan sayuran",
+    "keterangan": "Contoh sajian Mie Goreng spesial"
+  },
+  {
+    "id": 3,
+    "nama": "Ayam Goreng",
+    "bahan": "Ayam, bumbu rempah",
+    "kesulitan": "Mudah",
+    "gambar": "ayam-goreng.jpg",
+    "alt": "Piring saji berisi ayam goreng dengan nasi dan sayuran",
+    "keterangan": "Contoh sajian Ayam Goreng spesial"
+  }
+]
