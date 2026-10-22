@@ -74,7 +74,7 @@ export function periksaKolom(nama, nilai) {
     return "";
   }
 
-  if (nama === "bahan-utama") {
+ if (nama === "bahan-utama") {
     if (isi === "") return "Bahan utama wajib diisi. Contoh: Ayam, kunyit, serai.";
     if (isi.length < 3) return "Bahan utama terlalu pendek. Tulis minimal 3 huruf.";
     return "";

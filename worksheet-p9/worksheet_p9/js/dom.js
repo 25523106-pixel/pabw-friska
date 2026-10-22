@@ -3,7 +3,7 @@
 // Semua yang menyentuh halaman ada di sini.
 // Data dan fungsi murni datang dari app.js.
 // ============================================================
-import {
+ import {
   profil,
   daftarMasakan,
   kapitalAwal,
@@ -207,7 +207,7 @@ form.addEventListener("submit", (event) => {
     kesulitan: kapitalAwal(kolom["tingkat-kesulitan"].value),
   };
   daftarMasakan.push(resep);
-  perbarui();                                   // satu perubahan data, satu pemanggilan render
+  perbarui();                                  // satu perubahan data, satu pemanggilan render
 
   const terlihat = tingkatAktif === "semua" || tingkatAktif === resep.kesulitan.toLowerCase();
   statusForm.textContent = terlihat

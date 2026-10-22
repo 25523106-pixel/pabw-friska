@@ -1,0 +1,115 @@
+/* P5 - Layout Modern: Flexbox dan Grid
+   P6: jumlah kolom (.isi, .utama, .galeri) dipindah ke responsif.css */
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+header {
+  padding-block: var(--spacing-md);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.header-baris {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  gap: var(--spacing-md);
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.isi {
+  min-width: 0;
+  padding-block: var(--spacing-xl);
+}
+
+.sisi {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.utama {
+  min-width: 0;
+}
+
+.kartu {
+  min-width: 0;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-sm);
+  padding: var(--spacing-lg);
+}
+
+.kartu h2 {
+  margin-block-end: var(--space-3);
+}
+
+.galeri {
+  min-width: 0;
+}
+
+.galeri .kartu {
+  display: grid;
+  align-content: start;
+  min-height: 14rem;
+  min-width: 0;
+  padding: var(--spacing-md);
+}
+
+.galeri img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.menu-samping {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+}
+
+.menu-samping a {
+  display: block;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.menu-samping a:hover {
+  background-color: var(--hover-color);
+}
+
+footer {
+  padding-block: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
